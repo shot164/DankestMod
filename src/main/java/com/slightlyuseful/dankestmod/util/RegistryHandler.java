@@ -3,6 +3,7 @@ package com.slightlyuseful.dankestmod.util;
 import com.slightlyuseful.dankestmod.DankestMod;
 import com.slightlyuseful.dankestmod.blocks.BlockItemBase;
 import com.slightlyuseful.dankestmod.blocks.CumBlock;
+import com.slightlyuseful.dankestmod.blocks.GraphiteBlock;
 import com.slightlyuseful.dankestmod.items.ItemBase;
 import com.slightlyuseful.dankestmod.tools.ItemTier;
 import net.minecraft.block.Block;
@@ -62,10 +63,15 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> RED_SOCK = ITEMS.register("red_sock", ItemBase::new);
 
+    public static final RegistryObject<Item> GRAPHITE = ITEMS.register("graphite", ItemBase::new);
+
 
     // Tools Only
     public static final RegistryObject<SwordItem> CUM_SOCK = ITEMS.register("cum_sock", ()-> new SwordItem(ItemTier.CUM, 6, 0.0F, new Item.Properties().group(DankestMod.TAB)));
 
+    /*
+    public static final RegistryObject<SwordItem> GRAPHITE_SWORD = ITEMS.register("graphite_sword", ()-> new SwordItem(ItemTier.GRAPHITE, ));
+    */
 
     // Armor Only
     public static RegistryObject<ArmorItem> CUM_HELMET = ITEMS.register("cum_helmet", ()->
@@ -75,9 +81,13 @@ public class RegistryHandler {
     //Blocks Only
     public static final RegistryObject<Block> CUM_BLOCK = BLOCKS.register("cum_block", CumBlock::new);
 
+    public static final RegistryObject<Block> GRAPHITE_BLOCK = BLOCKS.register("graphite_block", GraphiteBlock::new);
+
 
     //Block Items
     public static final RegistryObject<Item> CUM_BLOCK_ITEM = ITEMS.register("cum_block", ()-> new BlockItemBase(CUM_BLOCK.get()));
+    public static final RegistryObject<Item> GRAPHITE_BLOCK_ITEM = ITEMS.register("graphite_block", ()->new BlockItemBase(GRAPHITE_BLOCK.get()));
+
 
 
 
