@@ -4,14 +4,14 @@ import com.slightlyuseful.dankestmod.DankestMod;
 import com.slightlyuseful.dankestmod.blocks.BlockItemBase;
 import com.slightlyuseful.dankestmod.blocks.CumBlock;
 import com.slightlyuseful.dankestmod.blocks.GraphiteBlock;
+//import com.slightlyuseful.dankestmod.items.Egg;
+import com.slightlyuseful.dankestmod.items.SunnySideUpEgg;
 import com.slightlyuseful.dankestmod.items.ItemBase;
 import com.slightlyuseful.dankestmod.tools.ItemTier;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
+import net.minecraft.item.*;
 import com.slightlyuseful.dankestmod.armor.ArmorMaterial;
-import net.minecraft.item.Item;
-import net.minecraft.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -65,17 +65,32 @@ public class RegistryHandler {
 
     public static final RegistryObject<Item> GRAPHITE = ITEMS.register("graphite", ItemBase::new);
 
+    public static final RegistryObject<SunnySideUpEgg> SIDE_UP_EGG = ITEMS.register("sunny_side_up_egg", SunnySideUpEgg::new);
+
 
     // Tools Only
     public static final RegistryObject<SwordItem> CUM_SOCK = ITEMS.register("cum_sock", ()-> new SwordItem(ItemTier.CUM, 6, 0.0F, new Item.Properties().group(DankestMod.TAB)));
 
-    /*
-    public static final RegistryObject<SwordItem> GRAPHITE_SWORD = ITEMS.register("graphite_sword", ()-> new SwordItem(ItemTier.GRAPHITE, ));
-    */
+
+    public static final RegistryObject<SwordItem> GRAPHITE_SWORD = ITEMS.register("graphite_sword", ()-> new SwordItem(ItemTier.GRAPHITE, 2, 0.6F, new Item.Properties().group(DankestMod.TAB)));
+    public static final RegistryObject<PickaxeItem> GRAPHITE_PICKAXE = ITEMS.register("graphite_pickaxe", ()-> new PickaxeItem(ItemTier.GRAPHITE, 0, 0.2F, new Item.Properties().group(DankestMod.TAB)));
+    public static final RegistryObject<AxeItem> GRAPHITE_AXE = ITEMS.register("graphite_axe", ()-> new AxeItem(ItemTier.GRAPHITE, 5, -0.1F, new Item.Properties().group(DankestMod.TAB)));
+    public static final RegistryObject<ShovelItem> GRAPHITE_SHOVEL = ITEMS.register("graphite_shovel", ()-> new ShovelItem(ItemTier.GRAPHITE, 0.5F, 0.0F, new Item.Properties().group(DankestMod.TAB)));
+    public static final RegistryObject<HoeItem> GRAPHITE_HOE = ITEMS.register("graphite_hoe", ()-> new HoeItem(ItemTier.GRAPHITE, -3, 2.0F, new Item.Properties().group(DankestMod.TAB)));
+
 
     // Armor Only
     public static RegistryObject<ArmorItem> CUM_HELMET = ITEMS.register("cum_helmet", ()->
             new ArmorItem(ArmorMaterial.CUM, EquipmentSlotType.HEAD, new Item.Properties().group(DankestMod.TAB)));
+
+    public static RegistryObject<ArmorItem> GRAPHITE_CHEST_PLATE = ITEMS.register("graphite_chest_plate", ()->
+            new ArmorItem(ArmorMaterial.GRAPHITE, EquipmentSlotType.CHEST, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> GRAPHITE_HELMET = ITEMS.register("graphite_helmet", ()->
+            new ArmorItem(ArmorMaterial.GRAPHITE, EquipmentSlotType.HEAD, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> GRAPHITE_BOOTS = ITEMS.register("graphite_boots", ()->
+            new ArmorItem(ArmorMaterial.GRAPHITE, EquipmentSlotType.FEET, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> GRAPHITE_LEGGINGS = ITEMS.register("graphite_leggings", ()->
+            new ArmorItem(ArmorMaterial.GRAPHITE, EquipmentSlotType.LEGS, new Item.Properties().group(DankestMod.TAB)));
 
 
     //Blocks Only
