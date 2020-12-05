@@ -4,7 +4,8 @@ import com.slightlyuseful.dankestmod.DankestMod;
 import com.slightlyuseful.dankestmod.blocks.BlockItemBase;
 import com.slightlyuseful.dankestmod.blocks.CumBlock;
 import com.slightlyuseful.dankestmod.blocks.GraphiteBlock;
-//import com.slightlyuseful.dankestmod.items.Egg;
+import com.slightlyuseful.dankestmod.blocks.GraphiteOre;
+import com.slightlyuseful.dankestmod.items.EmeraldEgg;
 import com.slightlyuseful.dankestmod.items.SunnySideUpEgg;
 import com.slightlyuseful.dankestmod.items.ItemBase;
 import com.slightlyuseful.dankestmod.tools.ItemTier;
@@ -67,6 +68,8 @@ public class RegistryHandler {
 
     public static final RegistryObject<SunnySideUpEgg> SIDE_UP_EGG = ITEMS.register("sunny_side_up_egg", SunnySideUpEgg::new);
 
+    public static final RegistryObject<EmeraldEgg> EMERALD_EGG = ITEMS.register("emerald_egg", EmeraldEgg::new);
+
 
     // Tools Only
     public static final RegistryObject<SwordItem> CUM_SOCK = ITEMS.register("cum_sock", ()-> new SwordItem(ItemTier.CUM, 6, 0.0F, new Item.Properties().group(DankestMod.TAB)));
@@ -82,6 +85,12 @@ public class RegistryHandler {
     // Armor Only
     public static RegistryObject<ArmorItem> CUM_HELMET = ITEMS.register("cum_helmet", ()->
             new ArmorItem(ArmorMaterial.CUM, EquipmentSlotType.HEAD, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> CUM_CHEST_PLATE = ITEMS.register("cum_chest_plate", ()->
+            new ArmorItem(ArmorMaterial.CUM, EquipmentSlotType.CHEST, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> CUM_LEGGINGS = ITEMS.register("cum_leggings", ()->
+            new ArmorItem(ArmorMaterial.CUM, EquipmentSlotType.LEGS, new Item.Properties().group(DankestMod.TAB)));
+    public static RegistryObject<ArmorItem> CUM_BOOTS = ITEMS.register("cum_boots", ()->
+            new ArmorItem(ArmorMaterial.CUM, EquipmentSlotType.FEET, new Item.Properties().group(DankestMod.TAB)));
 
     public static RegistryObject<ArmorItem> GRAPHITE_CHEST_PLATE = ITEMS.register("graphite_chest_plate", ()->
             new ArmorItem(ArmorMaterial.GRAPHITE, EquipmentSlotType.CHEST, new Item.Properties().group(DankestMod.TAB)));
@@ -97,11 +106,13 @@ public class RegistryHandler {
     public static final RegistryObject<Block> CUM_BLOCK = BLOCKS.register("cum_block", CumBlock::new);
 
     public static final RegistryObject<Block> GRAPHITE_BLOCK = BLOCKS.register("graphite_block", GraphiteBlock::new);
+    public static final RegistryObject <Block> GRAPHITE_ORE = BLOCKS.register("graphite_ore", GraphiteOre::new);
 
 
     //Block Items
     public static final RegistryObject<Item> CUM_BLOCK_ITEM = ITEMS.register("cum_block", ()-> new BlockItemBase(CUM_BLOCK.get()));
     public static final RegistryObject<Item> GRAPHITE_BLOCK_ITEM = ITEMS.register("graphite_block", ()->new BlockItemBase(GRAPHITE_BLOCK.get()));
+    public static final RegistryObject<Item> GRAPHITE_ORE_ITEM = ITEMS.register("graphite_ore", ()->new BlockItemBase(GRAPHITE_ORE.get()));
 
 
 
